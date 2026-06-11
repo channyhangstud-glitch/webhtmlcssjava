@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+</head>
+<body>
+    <script>
+        let code;
+        let name, qty, price;
+        let total, discount, payment;
+        let dis;
+
+        code = prompt("Input code of product:");
+        name = prompt("Input name:");
+        qty = parseInt(prompt("Input qty:"));
+        price = parseFloat(prompt("Input price:"));
+        dis = parseFloat(prompt("Input discount (%):"));
+
+        total = qty * price;
+        discount = total * dis / 100;
+        payment = total - discount;
+
+        document.write("Code : " + code + "<br>");
+        document.write("Name : " + name + "<br>");
+        document.write("Qty : " + qty + "<br>");
+        document.write("Price : $" + price + "<br>");
+        document.write("Total : $" + total + "<br>");
+        document.write("Discount : $" + discount + "<br>");
+        document.write("Payment : $" + payment + "<br>");
+
+        if (total >= 200) {
+            document.write("<br>Customer gets discount.");
+        } else {
+            document.write("<br>No discount.");
+        }
+    </script>
+</body>
+</html>

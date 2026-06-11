@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <table class="table w-100">
+           <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>gender</th>
+            <th>salary</th>
+            <th>position</th>
+            <th>bonus</th>
+            <th>total salary</th>
+           </tr>
+           <tr>
+            <td id="id"></td>
+            <td id="name"></td>
+            <td id="gender"></td>
+            <td id="salary"></td>
+            <td id="position"></td>
+            <td id="bonus"></td>
+            <td id="total_salary"></td>
+           </tr>
+        </table>
+
+    </div>
+   <script>
+    let id, name, gender;
+    let salary, position, bonus, total_salary;
+
+    id = prompt("Enter id");
+    name = prompt("Enter name");
+    gender = prompt("Enter gender");
+    salary = parseFloat(prompt("Enter salary"));
+    position = prompt("Enter position");
+
+    if(position.toLowerCase()==="manager"){
+        bonus = 20;
+        altert("you bonus 20% of your salary");
+    }else if(position.toLowerCase() === "accounting"){
+        bonus = 15;
+        altert("you bonus 15% of your salary");
+    }else if (position.toLowerCase()=="it"){
+       bonus= 25;
+        altert("you bonus 25% of your salary");
+    }else{
+       bonus= 10;
+        
+    }
+    total_salary = salary+ (salary*bonus)/100;
+
+        document.getElementById("id").innerHTML=id;
+        document.getElementById("name").innerHTML=name;
+        document.getElementById("gender").innerHTML=gender;
+        document.getElementById("salary").innerHTML =salary +"$";
+        document.getElementById("position").innerHTML= position ;
+        document.getElementById("bonus").innerHTML = bonus + "%";
+        document.getElementById("total_salary").innerHTML = total_salary + "$";
+
+   </script> 
+</body>
+</html>

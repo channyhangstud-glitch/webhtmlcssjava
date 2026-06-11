@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       let id;
+       let name, gender;
+       let  math, khmer, Biology, Chemistry, English, history, physics;
+       let total, average;
+
+       name = prompt("Input name:");
+       id = prompt("Input id:");
+       gender = prompt("Input gender:");
+       math = Number(prompt("math"));
+       khmer = Number(prompt("khmer"));
+       Biology = Number(prompt("Biology"));
+       Chemistry = Number(prompt("Chemistry"));
+       English = Number(prompt("English"));
+       history = Number(prompt("history"));
+       physics = Number(prompt("physics"));
+
+       total=khmer+ math + Biology + Chemistry + English + history + physics;
+       average= total/7;
+
+       document.write("Name: " + name + "<br>");
+       document.write("ID: " + id + "<br>");
+       document.write("Gender: " + gender + "<br>");
+       document.write("Total: " + total + "<br>");
+       document.write("Average: " + average + "<br>");
+
+       if(average>=75){
+        document.write("grade: A")
+       }else if(average>=70){
+         document.write("grade: B")
+       }else if(average>=65){
+        document.write("grade: C")
+       }else if (average>=50){
+        document.write("grade: D")
+       }else if (average<=50){
+          document.write("grade :E")
+       }else{
+        document.write("grade: F")
+       }
+
+      
+
+   </script> 
+</body>
+</html>
